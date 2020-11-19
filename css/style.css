@@ -9,10 +9,18 @@ body {
     height: 100%;
 }
 
-img[src*="tile.openstreetmap.org"] {
+.pink img[src*="tile.openstreetmap.org"] {
     /* filter: invert(17%) sepia(97%) saturate(3874%) hue-rotate(294deg) brightness(115%) contrast(125%);
     filter: hue-rotate(200deg); */
     filter: sepia(10%) saturate(400%) hue-rotate(250deg);
+}
+
+.dark img[src*="tile.openstreetmap.org"] {
+    filter: sepia(5%) grayscale(80%) invert();
+}
+
+h3 {
+    text-align: center;
 }
 
 .shinny-koffin {
@@ -22,8 +30,19 @@ img[src*="tile.openstreetmap.org"] {
     animation: shinny-koffin 5s infinite;
 }
 
+.burried-treasure {
+    position: relative;
+    width: 200px;
+    /* height: auto; */
+}
+
 .baked-beans {
+    position: absolute;
     width: 100px;
+    height: auto;
+    top: 50%;
+    bottom: 50%;
+    transform: translate(-150%, -50%);
 }
 
 @keyframes shinny-koffin {
