@@ -10,5 +10,6 @@ body {
 }
 
 img[src*="tile.openstreetmap.org"] {
-    filter: hue-rotate(200deg);
+    filter: invert(17%) sepia(97%) saturate(3874%) hue-rotate(294deg) brightness(115%) contrast(125%);
+    /* filter: hue-rotate(200deg); */
 }
