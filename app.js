@@ -7,11 +7,22 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 const points = [];
 let polyline;
 
+
 map.on('click', (event) => {
-    points.push([event.latlng.lat, event.latlng.lng]);
+    const latlng = [event.latlng.lat, event.latlng.lng];
+    points.push(latlng);
     console.log(points);
     if (!polyline) {
-        polyline = L.polyline(points, { color: 'red' }).addTo(map);
+        polyline = L.polyline(points, { color: 'red', weight: 15, }).addTo(map);
+        L.popup({
+                autoClose: false,
+                closeOnClick: false,
+            })
+            .setLatLng(latlng)
+            .setContent('<img class="shinny-koffin" src="https://i.imgur.com/STVYppv.png">')
+            .openOn(map);
+
+
 
     } else {
         polyline.setLatLngs(points);
@@ -21,4 +32,4 @@ map.on('click', (event) => {
 
 
 // zoom the map to the polyline
-map.fitBounds(polyline.getBounds());
+// map.fitBounds(polyline.getBounds());
