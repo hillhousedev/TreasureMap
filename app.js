@@ -30,7 +30,7 @@ map.on('click', (event) => {
     points.push(latlng);
     console.log(points);
     if (!polyline) {
-        polyline = L.polyline(points, { color: 'red', weight: 15, }).addTo(map);
+        polyline = L.polyline(points, { color: 'red', weight: 10, }).addTo(map);
         L.popup({
                 autoClose: false,
                 closeOnClick: false,
