@@ -16,10 +16,14 @@ img[src*="tile.openstreetmap.org"] {
 }
 
 .shinny-koffin {
-    width: 50px;
+    width: 100px;
     height: auto;
     ;
-    animation: shiny-animation 500ms infinite;
+    animation: shinny-koffin 5s infinite;
+}
+
+.baked-beans {
+    width: 100px;
 }
 
 @keyframes shinny-koffin {
@@ -27,13 +31,13 @@ img[src*="tile.openstreetmap.org"] {
         filter: hue-rotate(0deg);
     }
     25% {
-        filter: hue-rotate(-10deg);
+        filter: hue-rotate(-100deg);
     }
     50% {
-        filter: hue-rotate(30deg);
+        filter: hue-rotate(100deg);
     }
     75% {
-        filter: hue-rotate(-10deg);
+        filter: hue-rotate(-100deg);
     }
     100% {
         filter: hue-rotate(0deg);

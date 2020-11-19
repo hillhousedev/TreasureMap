@@ -6,6 +6,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 const points = [];
 let polyline;
+let bean = `https://static-cdn.jtvnw.net/emoticons/v1/302039277/4.0`
 
 
 map.on('click', (event) => {
@@ -26,6 +27,20 @@ map.on('click', (event) => {
 
     } else {
         polyline.setLatLngs(points);
+        if (Math.random() < 0.2) {
+            L.popup({
+                    autoClose: false,
+                    closeOnClick: false,
+                })
+                .setLatLng(latlng)
+                .setContent(`
+                <h1>Start on trail head, <br>hike until you happy, <br>then you drive back home.</h1> 
+                <img class="baked-beans" src="https://static-cdn.jtvnw.net/emoticons/v1/302039277/4.0">
+                `)
+                .openOn(map);
+
+
+        }
     }
 });
 
