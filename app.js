@@ -13,7 +13,20 @@ let mode = 'pink';
 mapContainer.classList.add('pink');
 const modes = ['pink', 'dark'];
 
+const defaultLatLng = [39.742043, -104.991531];
+// window.addEventListener('DOMContentLoaded', (event) => {
+//     console.log("Now fully loaded");
+//     var popup = L.popup({
+//             autoClose: false,
+//             closeOnClick: false,
+//         })
+//         .setLatLng(defaultLatLng)
+//         .setContent('<h1 class="info">Hello Friend Click around the map to find hidden treasures.</h1>')
+//         .openOn(map);
+//     console.log('DOM fully loaded and parsed');
+// })
 let bean = `https://static-cdn.jtvnw.net/emoticons/v1/302039277/4.0`
+
 
 
 map.on('click', (event) => {
@@ -51,8 +64,8 @@ map.on('click', (event) => {
                 })
                 .setLatLng(latlng)
                 .setContent(`
-                <h1>TOTAL: ${bakedBeans} </h1>
-                <h1>Start on trail head, <br>hike until you happy, <br>then you drive back home.</h1> 
+                <h2>TOTAL: ${bakedBeans} </h2>
+                <h3>Start on trail head, <br>hike until you happy, <br>then you drive back home.</h3> 
                 <div class="burried-treasure">
                     <img class="burried-treasure" src="http://i.imgur.com/4EzXhBE.png">
                     <img class="baked-beans" src="https://static-cdn.jtvnw.net/emoticons/v1/302039277/4.0">
